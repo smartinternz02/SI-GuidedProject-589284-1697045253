@@ -13,7 +13,7 @@ import pickle
 import warnings
 warnings.filterwarnings("ignore")
 
-model=pickle.load(open("training\projectPGP.pkl",'rb'))
+model=pickle.load(open("training/projectPGP.pkl",'rb'))
 
 app=Flask(__name__)
 
