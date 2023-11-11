@@ -69,9 +69,7 @@
 
             <li><a href="contact">Contact</a></li>
 
-            <li><a href="{{url_for('login')}}">Login</a></li>
-
-            <li><a href="{{url_for('register')}}">Register</a></li>
+            <li><a href="{{url_for('logout')}}">logout</a></li>
           </ul>
         </nav><!-- .navbar -->
 
@@ -97,11 +95,35 @@
 
       <!-- ======= Our Services Section ======= -->
 
-      <section id="services-list" class="services-list">
+      <section id="services-list" class="services-list fs-2">
+        <div class="container text-center border text-wrap fs-6">
+          <div class="container">
+            <h3>
+              Definitions for the payment parameters
+            </h3>
+
+          </div>
+          <div>
+            <p>
+              1. step: represents a unit of time where 1 step equals 1 hour <br>
+              2. type: type of online transaction <br>
+              3. amount: the amount of the transaction <br>
+              4. nameOrig: customer starting the transaction <br>
+              5. oldbalanceOrg: balance before the transaction <br>
+              6. newbalanceOrig: balance after the transaction <br>
+              7. nameDest: recipient of the transaction <br>
+              8. oldbalanceDest: initial balance of recipient before the transaction <br> 
+              9. newbalanceDest: the new balance of recipient after the transaction <br>
+              10. isFraud: fraud transaction <br>
+            </p>
+          </div>
+        </div>
         <form action="services" method="POST">
           <div class="mb-3 text-center font-weight-bold">
-            <label for="step" class="form-label font-weight-bold"><p class="font-weight-bold"></p>step</label>
-            <input type="text" name="step" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="step" class="form-label font-weight-bold">
+              <p class="font-weight-bold"></p>step
+            </label>
+            <input type="text" name="step" class="form-control" id="exampleInputEmail1">
           </div>
 
           <div class="mb-3 text-center">
@@ -139,7 +161,7 @@
           </div>
         </form>
   </div>
-  <div class="container ml-6 mb-7 mt-4">
+  <div class="container ml-6 mb-7 mt-4 border">
     <h2>
       The Prediction of the payment is : {{pred_text}}
     </h2>
@@ -183,7 +205,7 @@
               <li><i class="bi bi-dash"></i> <a href="/">About us</a></li>
 
               <li><i class="bi bi-dash"></i> <a href="/">Services</a></li>
-          
+
               <li><i class="bi bi-dash"></i> <a href="/">Privacy policy</a></li>
             </ul>
           </div>

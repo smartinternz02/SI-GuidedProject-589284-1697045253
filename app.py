@@ -118,14 +118,17 @@ def register():
 
 
 @app.route('/about')
+@login_required
 def about_page():
     return render_template('about.html')
 
 @app.route('/team')
+@login_required
 def team_page():
     return render_template('team.html')
 
 @app.route('/contact')
+@login_required
 def contact_page():
     return render_template('contact.html')
 
@@ -146,10 +149,10 @@ def predict():
         
         if(pred[0][1]<0.5):
             
-            return render_template('services.html',pred_text="is Fraud")
+            return render_template('services.html',pred_text="Fraud")
     
         else:
-            return render_template('services.html',pred_text="is not Fraud")
+            return render_template('services.html',pred_text="not Fraud")
             
 
 if __name__=="__main__":

@@ -66,9 +66,7 @@
 
           <li><a href="contact" class="active">Contact</a></li>
 
-          <li><a href="{{url_for('login')}}">Login</a></li>
-
-          <li><a href="{{url_for('register')}}">Register</a></li>
+          <li><a href="{{url_for('logout')}}">logout</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -127,7 +125,7 @@
 
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="/dashboard" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
